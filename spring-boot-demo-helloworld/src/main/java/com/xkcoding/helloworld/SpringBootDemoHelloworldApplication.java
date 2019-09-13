@@ -2,6 +2,8 @@ package com.xkcoding.helloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
  * <p>
@@ -17,11 +19,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @modified: yangkai.shen
  */
 @SpringBootApplication
-public class SpringBootDemoHelloworldApplication {
+public class SpringBootDemoHelloworldApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemoHelloworldApplication.class, args);
 	}
 
 
+    /**
+     * 继承 SpringBootServletInitializer 类 重写 configure 方法
+     *
+     * @param builder
+     * @return
+     */
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(SpringBootDemoHelloworldApplication.class);
+    }
 }

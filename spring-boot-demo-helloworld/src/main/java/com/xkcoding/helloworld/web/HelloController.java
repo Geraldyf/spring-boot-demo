@@ -21,6 +21,7 @@ public class HelloController {
         if (StrUtil.isBlank(who)) {
             who = "World";
         }
+        System.out.println(who);
         return StrUtil.format("Hello, {}!", who);
     }
 
