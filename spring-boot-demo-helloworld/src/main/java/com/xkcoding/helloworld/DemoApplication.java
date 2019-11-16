@@ -19,10 +19,10 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * @modified: yangkai.shen
  */
 @SpringBootApplication
-public class SpringBootDemoHelloworldApplication extends SpringBootServletInitializer {
+public class DemoApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootDemoHelloworldApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 
@@ -34,6 +34,6 @@ public class SpringBootDemoHelloworldApplication extends SpringBootServletInitia
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(SpringBootDemoHelloworldApplication.class);
+        return builder.sources(DemoApplication.class);
     }
 }
